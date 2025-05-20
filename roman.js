@@ -41,7 +41,7 @@ class Roman {
 			this.roman = this.roman.replace("VIIII","IX")
 			this.roman = this.roman.replace("IIII","IV")
 		} else {
-			this.roman = `${new Roman(this.number/1000).toString()}→${new Roman(this.number%1000).toString()}`
+			this.roman = `${new Roman(this.number/(1000**Math.floor(Math.log10(this.number/4)/3))).toString()}^{${new Roman(Math.log10(this.number/4)/3)}} ${new Roman(this.number%(1000**Math.floor(Math.log10(this.number/4)/3))).toString()}`
 		};
 	};
 	toString() {
