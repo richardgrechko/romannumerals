@@ -3,6 +3,9 @@ class Roman {
 		this.number = Math.floor(number);
 		this.roman = "";
 		if (number < 4000) {
+			if (number == 0) {
+				this.roman = "nulla";
+			}
 			while (number >= 1000) {
 				this.roman += "M";
 				number -= 1000;
