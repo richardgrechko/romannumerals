@@ -38,7 +38,7 @@ class Roman {
 			this.roman = this.roman.replace("VIIII","IX")
 			this.roman = this.roman.replace("IIII","IV")
 		} else {
-			this.roman = `${roman(this.number/1000)}→${roman(this.number%1000)}`
+			this.roman = `${new Roman(this.number/1000)}→${new Roman(this.number%1000)}`
 		};
 	}
 };
