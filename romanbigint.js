@@ -43,7 +43,7 @@ class BigIntRoman {
 		} else {
 			var nonBigInt = Number(this.number)
 			var modulo = BigInt(nonBigInt%(1000**Math.log10(nonBigInt/4)/3));
-			this.roman = `${new Roman(BigInt(Math.floor(nonBigInt/(1000**Math.log10(nonBigInt/4)/3)))).toString()}^{${new Roman(BigInt(Math.log10(nonBigInt/4)/3))}}${(modulo != 0n) ? ` ${new Roman(modulo).toString()}` : ""}`
+			this.roman = `${new BigIntRoman(BigInt(Math.floor(nonBigInt/(1000**Math.log10(nonBigInt/4)/3)))).toString()}^{${new BigIntRoman(BigInt(Math.log10(nonBigInt/4)/3))}}${(modulo != 0n) ? ` ${new BigIntRoman(modulo).toString()}` : ""}`
 		};
 	};
 	toString() {
